@@ -1,0 +1,11 @@
+{
+    "name": "titi",
+    "error": {
+        "1": "Không chịu lấy dữ liệu nhập từ form",
+        "2" : " require phần head tầm bậy",
+        "3":" Biến ko để dấu $",
+        "4" : "Not connect to host",
+        "5": " Sai ten bien",
+        "6" : "nên thiết lập ngày date('Y-m-d | H:i:s')"
+    }
+}

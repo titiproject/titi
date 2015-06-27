@@ -1,0 +1,45 @@
+{
+    "name": "titi",
+    "step1": {
+        "content":"Viết code phần cập nhật thông tin người dùng",
+        "aim" : "Hiển thị lên hình UserAdmin",
+        "date":"26.06.2015",
+        "Process": {
+            "write html":"OK",
+            "Write models" : "OK",
+            "collapse html php": "OK",
+            "running" : "OK"
+        },"idea": {
+            "1":"set timeout for admin",
+            "2": {
+                "Event":"Khi click vào Edit profile",
+                "URL":"index.php?controller=user&action=edit",
+                "Action":{
+                    "Kiểm tra":"Có Account hay chưa",
+                    "Có": "cập nhật lại customer",
+                    "Không": "Tạo mới customer"
+                },
+            "3": {"Idea":"Update field lastlogin of account", "Status":"not"}
+            }
+        }
+    }, "step2": {
+        "content":"Viết code thêm categories",
+        "aim": "Hiển thị lên phần edit và cập nhật",
+        "process": {
+            "before":"Hiển thị thông tin người dùng",
+            "after": "Viết trang thêm Category",
+            "1": "Viết giao diện thêm Category",
+            "2": "Kiểm tra lại code models",
+            "3": "Viết code thêm trên controller"
+        }, "idea" : {
+            "1": "Trang edit profile chưa cập nhật avatar"
+        }
+    }, "step3": {
+        "content": "Sửa giao diện list loại sản phẩm",
+        "1":"Đổi icon cho status",
+        "2": "So sánh ngày với ngày hiện tại ở ngày tạo, ngày chỉnh sửa",
+        "3": "Hiển thị tên author",
+        "4": "hiển thị parent"
+    }
+}
+
