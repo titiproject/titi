@@ -41,7 +41,11 @@
         "3": "Hiển thị tên author",
         "4": "hiển thị parent"
     }, "step4" : {
-        "content" : "Sửa lại cái select parentid"
+        "content" : "Sửa lại cái select parentid",
+        "1" : "Viết xong cái xóa category",
+        "2" : "Có lỗi ở phần parentid Selected => hàm showParentSelect() file admin/library/category.helper.php",
+        "3" : "hoàn thành cơ bản thêm xóa sửa category",
+        "4" : "Làm được cái cho form vào thẻ a => submit ở file admin/library/category.helper.php"
     }
 }
 
