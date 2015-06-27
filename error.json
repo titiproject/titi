@@ -6,6 +6,7 @@
         "3":" Biến ko để dấu $",
         "4" : "Not connect to host",
         "5": " Sai ten bien",
-        "6" : "nên thiết lập ngày date('Y-m-d | H:i:s')"
+        "6" : "nên thiết lập ngày date('Y-m-d | H:i:s') => step 3",
+        "7" : "Cộng trừ ngày giờ => step 3"
     }
 }

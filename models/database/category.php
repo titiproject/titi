@@ -65,6 +65,29 @@ class CategoryDB extends Database {
         if ($result) return true;
         return false;
     }
+  /**
+    * updateCategory()
+    *  add a category in database 
+    * @param (category) category object
+    * @return (boolean) object 
+    */
+    public function updateCategory($cat) {
+        // check category
+        //if (!is_a($category, 'Category')) return false;
+        //$cat = new Category();
+        $this->db_connect();
+        $sql = "UPDATE `titi`.`categories` SET `catname` = '".$cat->getCatname()."',";
+        $sql.= "`modified` = '".$cat->getModified()."',";
+        //$sql.= "`author` = '".$cat->getAuthor()."',";
+        $sql.= "`description` = '".$cat->getDescription()."',";
+        $sql.= "`parentid` = '".$cat->getParentId()."',";
+        $sql.= "`status` = '".$cat->getStatus()."' WHERE `categories`.`catid` =".$cat->getCatid();
+        $result = $this->query($sql);
+        echo $sql;
+        $this->db_close();
+        if ($result) return true;
+        return false;
+    }
 }
 
 

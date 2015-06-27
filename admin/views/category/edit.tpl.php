@@ -15,24 +15,24 @@ require('views/page/jquery.ui.php');
                     <table border="1px" class="form" cellspacing="5" style="float: left;">
                         <tr>
                             <td><span class="field">Category Name:</span></td>
-                            <td><input type="text" name="catname" value="<?php echo $_POST['catname']; ?>" /></td>
+                            <td><input type="text" name="catname" value="<?php if(isset($cat))echo $cat->getCatname(); else echo $_POST['catname']; ?>" /></td>
                         </tr>
                         <tr>
                             <td><span class="field">Description:</span></td>
-                            <td><textarea name="description" value=""><?php echo $_POST['description']; ?></textarea></td>
+                            <td><textarea name="description" value=""><?php if(isset($cat))echo $cat->getDescription(); else echo $_POST['description']; ?></textarea></td>
                         </tr>
                         <tr>
                             <td><span class="field">Status:</span></td>
                             <td><select id="status" name="status">
-                                    <option value="1" <?php isSelected($_POST['status'], '1')?>>active</option>
-                                    <option value="0" <?php isSelected($_POST['status'], '0')?>>lock</option>
-                                    <option value="-1" <?php isSelected($_POST['status'], '-1')?>>archive</option>
+                                    <option value="1" <?php if(isset($cat)) isSelected($cat->getStatus(), '1'); else isSelected($_POST['status'], '1');?>>active</option>
+                                    <option value="0" <?php if(isset($cat)) isSelected($cat->getStatus(), '0'); else isSelected($_POST['status'], '0');?>>lock</option>
+                                    <option value="-1" <?php if(isset($cat)) isSelected($cat->getStatus(), '-1'); else isSelected($_POST['status'], '-1');?>>archive</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
                             <td><span class="field">Parent:</span></td>
-                            <td><?php showParentSelect($catList); ?></td>
+                            <td><?php isset($cat)?showParentSelect($catList, $cat):  showParentSelect($catList); ?></td>
                         </tr>
                         <tr>
                             <td style="vertical-align: central;" align="right">

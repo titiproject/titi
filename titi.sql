@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 27, 2015 at 08:03 AM
+-- Generation Time: Jun 27, 2015 at 09:35 PM
 -- Server version: 5.5.43-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.9
 
@@ -53,23 +53,28 @@ INSERT INTO `accounts` (`id`, `username`, `email`, `password`, `status`, `lastLo
 --
 
 CREATE TABLE IF NOT EXISTS `categories` (
-  `catid` int(10) NOT NULL DEFAULT '0',
+  `catid` int(10) NOT NULL AUTO_INCREMENT,
   `catname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `modified` datetime NOT NULL,
   `created` datetime NOT NULL,
   `author` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `parentid` int(10) NOT NULL,
-  `status` tinyint(4) NOT NULL,
+  `status` tinyint(1) NOT NULL,
   PRIMARY KEY (`catid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`catid`, `catname`, `modified`, `created`, `author`, `description`, `parentid`, `status`) VALUES
-(0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '', 0, 0);
+(1, 'Sua bot', '2015-06-27 09:32:30', '2015-06-27 09:32:30', '1', 'asdasdasdsadsadsadsadsadsadasdsadsadsadsadsadsadas', -1, 1),
+(2, 'Sua bot', '2015-06-27 11:05:29', '2015-06-27 11:05:29', '1', 'Ã¡das', -1, 1),
+(3, 'Sữ dê', '2015-06-27 07:27:29', '2015-06-27 07:27:29', '2', '', -1, 1),
+(4, 'SUMO', '2015-06-27 08:06:28', '2015-06-27 08:06:28', '1', 'sumo Sữa', -1, 1),
+(5, 'Sữ bò', '2015-06-27 08:38:19', '2015-06-27 08:38:19', '1', 'sữa bò ', -1, 1),
+(6, 'Korea', '2015-06-27 20:41:15', '2015-06-27 20:41:15', '1', 'sada ', -1, 1);
 
 -- --------------------------------------------------------
 
@@ -98,8 +103,8 @@ CREATE TABLE IF NOT EXISTS `customers` (
 --
 
 INSERT INTO `customers` (`customerid`, `name`, `address`, `city`, `state`, `zip`, `country`, `created`, `gender`, `phone`, `email`, `avatar`) VALUES
-(1, 'admin', 'admin', 'HCM', '1', '79797979', 'Viá»‡t Nam', '2015-06-27 01:26:48', 0, 'sdt', '', ''),
-(2, 'Huá»³nh ChÃ­ TÃ¢m', 'Huá»³nh KhÆ°Æ¡ng An', 'Há»“ ChÃ­ Minh', '1', '9999999', 'Viá»‡t Nam', '2015-06-27 01:06:53', 0, '', '', '');
+(1, 'admin', 'admin', 'HCM', '1', 'zip', 'Viá»‡t Nam', '2015-06-27 01:26:48', 1, '0909797979', 'admin@mail.com', ''),
+(2, 'Huỳnh Chí Tâm', 'Huỳnh Khương An', 'Hồ Chí Minh', '1', '9999999', 'Việt Nam', '2015-06-27 01:06:53', 1, '0909797979', 'admin@mail.com', '');
 
 -- --------------------------------------------------------
 

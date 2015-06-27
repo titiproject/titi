@@ -40,6 +40,8 @@
         "2": "So sánh ngày với ngày hiện tại ở ngày tạo, ngày chỉnh sửa",
         "3": "Hiển thị tên author",
         "4": "hiển thị parent"
+    }, "step4" : {
+        "content" : "Sửa lại cái select parentid"
     }
 }
 

@@ -32,7 +32,7 @@ function showTBody($catList, $cusList) {
         // edit
         echo "<form id='frmEdit".$v->getCatid()."' name='frmEdit' action='index.php?controller=category&action=edit' method='post'>";
         echo "<input type='hidden' name='catid' value='".$v->getCatid(),"'/>";
-        echo "<a id='edit".$v->getCatid()."' href='javascript:void(0);' class='btn'><i class='fa fa-edit fa-lg'></i></a>";
+        echo "<a id='edit".$v->getCatid()."' name='edit' href='javascript:void(0);' class='btn'><i class='fa fa-edit fa-lg'></i></a>";
         echo "<script>$(document).ready(function(){\$('#edit".$v->getCatid()."').click(function() {\$('#frmEdit".$v->getCatid()."').submit();});});</script>";
         echo "</form>";
         // delete
@@ -114,10 +114,32 @@ function compareCurrentDate($t) {
  * @param string $s '09:30:30'
  * **/
 function showParentId($id, $catList) {
-   $catList= new CategoryList();
+   //$catList= new CategoryList();
    $result =$catList->findCategoryId($id);
    if ($result) {
        return $result->getCatname();
    }
    return "no parent";
+}
+/**
+ * showParentSelect($t)
+ * @param string $s '09:30:30'
+ * **/
+function showParentSelect($catList, $cat = null) {
+   $str = "<select id='parentid' name='parentid' style='width: 150px'>\n";
+   $str.= "<option value='-1'>no parent cat</option>\n";
+   foreach ($catList->getList() as $k => $v) {
+       $str .= "<option value='".$k."' ";
+        if(isset($cat)) 
+            $str .= isSelectedCatPid($cat->getParentId(), $v->getParentId());
+        else $str .= isSelectedCatPid($_POST['parentid'], $v->getParentId());
+       $str.= ">".$v->getCatname()."</option>\n";
+   }
+   $str .= "</select>\n";
+   echo $str;
+   //return $str;
+}
+function isSelectedCatPid($value1,$value2) {
+    //if (!isset($value1)) { return ""; }
+ return $value1 == $value2?" selected='selected'":'';
 }
