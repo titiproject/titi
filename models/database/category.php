@@ -83,6 +83,21 @@ class CategoryDB extends Database {
         $sql.= "`parentid` = '".$cat->getParentId()."',";
         $sql.= "`status` = '".$cat->getStatus()."' WHERE `categories`.`catid` =".$cat->getCatid();
         $result = $this->query($sql);
+        $this->db_close();
+        if ($result) return true;
+        return false;
+    }
+    
+      /**
+    * deleteCategory()
+    *  delete a category in database 
+    * @param (string) catid object
+    * @return (boolean) object 
+    */
+    public function removeCategory($catid) {
+        $this->db_connect();
+        $sql = "DELETE FROM `titi`.`categories` WHERE `categories`.`catid` =".$catid;
+        $result = $this->query($sql);
         echo $sql;
         $this->db_close();
         if ($result) return true;

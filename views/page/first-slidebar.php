@@ -1,6 +1,6 @@
 <div id="first-sidebar">
                 <div class="widget">
-                    <h2>Site Naviagtion</h2>
+                    <h2><?php echo checkControllerActionHome($controller, $action)?"Các loại sản phẩm":"Site Naviagtion"; ?></h2>
                     <ul id="menu-categories-menu">
                         <li><a href="#">Home Page</a></li>
                         <li><a href="#">About</a></li>

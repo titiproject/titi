@@ -21,3 +21,8 @@ function titiimport($file) {
 	show_404();
     }
 }
+
+function checkControllerActionHome($controller, $action) {
+    if ($controller == 'home' && $action == 'index') return true;
+    return false;
+}

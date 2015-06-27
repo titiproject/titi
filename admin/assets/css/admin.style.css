@@ -358,7 +358,7 @@ select {
 .primary {background: #a1a1a1;}
 
 .overflow { // độ dài của select
-    height: 50px;
+    height: 30px;
 }
 table.form td .login {
     //margin:3px;
@@ -402,4 +402,8 @@ table.form td .field {
 }
 #table td{
     font-size: 10pt;
+}
+label {
+    display: block;
+    margin: 30px 0 0 0;
 }

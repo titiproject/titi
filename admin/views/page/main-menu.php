@@ -1,7 +1,7 @@
 <div id="cssmenu">
                 <ul id="main-menu">
                     <li class="active"><a href="index.php?controller=home&action=index">Dashboard</a></li>
-                    <li><a href="index.php?controller=home&action=index">Home</a></li>
+                    <li><a href="../index.php">Home</a></li>
                     <li><a href="#">Products</a>
                        <ul class="has-sub">
                             <li><a href="#">All Products</a>

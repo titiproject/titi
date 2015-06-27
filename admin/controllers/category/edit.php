@@ -18,7 +18,6 @@ $cat = null;
 if (isset($cat)) echo "cat";
 if (isset($_POST['catid'])) {
     $catid = $_POST['catid'];
-    echo $catid;
     $_SESSION['catid_edit'] = $catid;
     $cat = $catList->getCategory($catid);
 }

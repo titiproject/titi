@@ -57,11 +57,13 @@ require('views/page/jquery.ui.php');
  
     //$( "#files" ).selectmenu();
     //$('#created').datepicker();
-    $("#parentid").selectmenu();
+    $("#parentid").selectmenu()
+      .selectmenu("menuWidget")
+        .addClass("overflow");
     $( "#status" )
       .selectmenu()
-      .selectmenu( "menuWidget" )
-        .addClass( "overflow" );
+      .selectmenu("menuWidget")
+        .addClass("overflow");
   });
   </script>
 <?phprequire('views/page/footer.php')?>

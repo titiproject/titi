@@ -36,10 +36,10 @@ function showTBody($catList, $cusList) {
         echo "<script>$(document).ready(function(){\$('#edit".$v->getCatid()."').click(function() {\$('#frmEdit".$v->getCatid()."').submit();});});</script>";
         echo "</form>";
         // delete
-        echo "<form id='frmDelete".$v->getCatid()."' name='frmEdit' action='index.php?controller=category&action=delete' method='post'>";
+        echo "<form id='frmRemove".$v->getCatid()."' name='frmRemove' action='index.php?controller=category&action=remove' method='post'>";
         echo "<input type='hidden' name='catid' value='".$v->getCatid(),"'/>";
-        echo "<a id='delete".$v->getCatid()."' href='javascript:void(0);' class='btn'><i class='fa fa-remove fa-lg'></i></a>";
-        echo "<script>$(document).ready(function(){\$('#delete".$v->getCatid()."').click(function() {\$('#frmDelete".$v->getCatid()."').submit();});});</script>";
+        echo "<a id='remove".$v->getCatid()."' name='remove' href='javascript:void(0);' class='btn'><i class='fa fa-remove fa-lg'></i></a>";
+        echo "<script>$(document).ready(function(){\$('#remove".$v->getCatid()."').click(function() {\$('#frmRemove".$v->getCatid()."').submit();});});</script>";
         echo "</form>";
         echo "</td>";
         echo "</tr>";
@@ -49,7 +49,7 @@ function showTBody($catList, $cusList) {
 function showStatusCategory($status) {
     $str = "";
     if ($status == '1')  $str = "<i class='fa fa-check-circle fa-lg'></i>";
-    else if ($status == '0') $str = "<i class='fa fa-imes-circle fa-lg'></i>";
+    else if ($status == '0') $str = "<i class='fa fa-times-circle fa-lg'></i>";
     else $str = "<i class='fa fa-archive fa-lg'></i>";
     $str = "<a href='#'>".$str."</a>";
     return $str;
@@ -127,12 +127,10 @@ function showParentId($id, $catList) {
  * **/
 function showParentSelect($catList, $cat = null) {
    $str = "<select id='parentid' name='parentid' style='width: 150px'>\n";
-   $str.= "<option value='-1'>no parent cat</option>\n";
+   $str.= "<option value='-1'".isSelectedCatPid($_POST['parentid'], -1).">no parent cat</option>\n";
    foreach ($catList->getList() as $k => $v) {
        $str .= "<option value='".$k."' ";
-        if(isset($cat)) 
-            $str .= isSelectedCatPid($cat->getParentId(), $v->getParentId());
-        else $str .= isSelectedCatPid($_POST['parentid'], $v->getParentId());
+       $str .= isSelectedCatPid($_POST['parentid'], $v->getParentId());
        $str.= ">".$v->getCatname()."</option>\n";
    }
    $str .= "</select>\n";
