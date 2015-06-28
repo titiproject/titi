@@ -41,7 +41,10 @@ if (isset($_POST['save'])) {
     //$idCatInsert = $catDB->getInsertId();
     if (!$kq) { $error = "Co loi trong qua trinh cap nhat"; } else { $success = "Cap nhat du lieu thanh cong";}
 }
-
+if (isset($_POST['cancel'])) {
+    unset($_SESSION['catid_edit']);
+    header('Location:'.$urlDefault);
+}
 
 
 require('views/'.$controller.'/'.$action.'.tpl.php');

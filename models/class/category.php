@@ -81,8 +81,8 @@ class CategoryList {
     }
     public function add($category) {
         if (!is_a($category, 'Category')) return false;
-        $cate = $this->find($category);
-        if (!$cate) {
+        $cate1 = $this->find($category);
+        if (!$cate1) {
             $this->list[$category->getCatid()] = $category;
             return true;
         }

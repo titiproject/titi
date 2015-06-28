@@ -4,8 +4,8 @@
                     <li><a href="../index.php">Home</a></li>
                     <li><a href="#">Products</a>
                        <ul class="has-sub">
-                            <li><a href="#">All Products</a>
-                            <li><a href="#">Add new product</a>
+                            <li><a href="index.php?controller=product&action=list">All Products</a>
+                            <li><a href="index.php?controller=product&action=add">Add new product</a>
                             <li><a href="#">Rating</a>
                         </ul>
                     </li>

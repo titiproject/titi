@@ -32,14 +32,14 @@ require('views/page/jquery.ui.php');
                         </tr>
                         <tr>
                             <td><span class="field">Parent:</span></td>
-                            <td><?php isset($cat)?showParentSelect($catList, $cat):  showParentSelect($catList); ?></td>
+                            <td><?php isset($cat)?showParentSelect($catList,true, $cat):  showParentSelect($catList); ?></td>
                         </tr>
                         <tr>
                             <td style="vertical-align: central;" align="right">
                                 <input class="btn primary" type="submit" name="save" value="save" style="" /></form>
                             </td>
                             <td style="vertical-align: central;" align="center">        
-                                <form method="post" action="<?php echo $urlDefault; ?>"><input type="submit" class="btn" name="cancel" value="cancel" style=""/></form>
+                                <form method="post" action="<?php echo $urlAction; ?>"><input type="submit" class="btn" name="cancel" value="cancel" style=""/></form>
                             </td>
                         </tr>
                         

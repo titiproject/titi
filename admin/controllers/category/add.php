@@ -2,6 +2,8 @@
 // load Model
 require_once('models/category.php');
 require_once('library/category.helper.php');
+require_once('models/product.php');
+require_once('library/product.helper.php');
 
 $title = ' Add Category';
 $urlDefault = "index.php?controller=home&action=index";

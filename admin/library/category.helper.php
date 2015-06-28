@@ -125,9 +125,9 @@ function showParentId($id, $catList) {
  * showParentSelect($t)
  * @param string $s '09:30:30'
  * **/
-function showParentSelect($catList, $cat = null) {
+function showParentSelect($catList,$iscat = true, $cat = null) {
    $str = "<select id='parentid' name='parentid' style='width: 150px'>\n";
-   $str.= "<option value='-1'".isSelectedCatPid($_POST['parentid'], -1).">no parent cat</option>\n";
+   if($iscat) $str.= "<option value='-1'".isSelectedCatPid($_POST['parentid'], -1).">no parent cat</option>\n";
    foreach ($catList->getList() as $k => $v) {
        $str .= "<option value='".$k."' ";
        $str .= isSelectedCatPid($_POST['parentid'], $v->getParentId());

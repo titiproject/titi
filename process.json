@@ -46,6 +46,17 @@
         "2" : "Có lỗi ở phần parentid Selected => hàm showParentSelect() file admin/library/category.helper.php",
         "3" : "hoàn thành cơ bản thêm xóa sửa category",
         "4" : "Làm được cái cho form vào thẻ a => submit ở file admin/library/category.helper.php"
+    }, "step5" : {
+        "date" : "28/06/2015",
+        "content": "Thêm product",
+        "process" : {
+            "1": "Viết class Product, ProductList, ProductDB",
+            "2" : "Viết controller và giao diện views",
+            "3" : "Chạy thử và fix lỗi",
+            "4" : "Các phần trên OK",
+            "5": "Thêm phần xử lý hình ảnh ở add product",
+            "6" : "Sau khi save mới có thể chèn hình ảnh"
+        }
     }
 }
 
