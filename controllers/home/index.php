@@ -1,6 +1,6 @@
 <?php
 // load Model
-//require_once('models/database/product.php');
+
 
 
 // truyền dữ liệu qua view
@@ -9,8 +9,7 @@ $title = 'titi | Trang chủ';
 
 
 // load category
-//$catDB = new CategoryDB();
-//$catList = $catDB->getCategoies();
+
 
 // load view len
 $file = 'views/'.$controller.'/'.$action.'.tpl.php';

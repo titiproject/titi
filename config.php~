@@ -12,8 +12,8 @@ class pConfig {
     
     /* Database setting */
     public $dbtype = 'mysqli';
-    public $host = 'localhost';
-    public $user = 'root';
-    public $password = 'root';
-    public $db = 'titi';
+    public $host = 'mysql.hostinger.vn';
+    public $user = 'u512528410_admin';
+    public $password = 'itweb_10';
+    public $db = 'u512528410_titi';
 }

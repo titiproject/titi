@@ -153,8 +153,7 @@ dd p{line-height:150%}
     float: left;
 }
 #main-content {
-    //width:540px;
-    width:750px;
+    width:540px;
     float: left;
     margin:0 15px;
 }
@@ -190,7 +189,7 @@ dd p{line-height:150%}
 .post h3 { margin: 18px 0 0 158px; font-size: 18px;}
 .post h3 a:hover { text-decoration: underline;}
 .post img { float: left; margin: 0 15px;}
-//.post p {margin-left: 158px; }
+.post p {margin-left: 158px; }
 .post .meta-data { margin: 15px 0; border-top: 1px solid #bcd4da; border-bottom: 1px solid #bcd4da;
     padding: 5px;
 }
@@ -279,53 +278,3 @@ a.more-link:hover {text-decoration: underline;}
     padding: 3px;
 
 }
-/** Product **/
-.more-product {
-    display: block;
-    //border: 1px solid red;
-    float: right;
-    color: #ce9702;
-    font-size: 12px;
-    margin-right: 10px;
-}
-/*
-.products {
-    margin: 5px 2px 0px 2px;
-    overflow: hidden;
-    padding: 2px;
-    height: 250px;
-}
-.product {
-  display: block;float: left;  
-  overflow: hidden;
-  width: 175px;
-  height: 230px;
-}*/
-/**  old product **/
-/*.product img { height: 160px; width: 130px;border:1px solid red;}*/
-/*.proImage { float: left; margin:7px;}*/
-/*.proContent {  display: block;float: left;margin: 5px 10px; height: 50px;}*/
-/*.proContent p  { text-align: center; display: block; height: 20px;}*/
-/*.proContent p a {display: block; height: 20px;color:#fff;}*/
-/*.proContent p.price { color: #990000; font-weight: bold;}*/
-/** product new **/
-
-/** Scroll bar **/
-.frame { height: 232px; line-height: 232px; overflow: hidden; margin-top:5px;}
-.frame ul {list-style: none; margin: 0; padding: 0; height: 100%;font-size: 50px;}
-.frame ul li { float: left;   margin: 0 1px 0 0; padding: 0; background: #fff; 
-  text-align: center; cursor: pointer;}
-.frame ul li.active {color: #fff; background: rgba(0,0,0,.09);} //note
-.controls { margin: 25px 0;text-align: center;}
-.btn {position: relative;display: inline-block;padding: 4px 12px;margin-bottom: 0;
-  color: #333333;text-align: center; vertical-align: middle; cursor: pointer; background-color: #fff;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.15);}
-.btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
-  color: #333;background-color: #f5f5f5;}
-.btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
-  color: #333;background-color: #f5f5f5;}
-.btn.disabled, .btn[disabled] {cursor: default;background-image: none;opacity: 0.65;filter: alpha(opacity=65);}
-
-/**Text product **/
-.pro img {display: block; width: 150px; height: 200px;}
-.pro p { font-size: 10pt; color:red; line-height: 1.4;}

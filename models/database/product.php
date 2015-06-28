@@ -1,6 +1,5 @@
 <?php
-
-/* 
+/* *
  * Connect to database
  */
 class ProductDB extends Database {

@@ -3,7 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/titi/error.json</file>
+            <file>file:/var/www/html/titi/admin/library/category.helper.php</file>
+            <file>file:/var/www/html/titi/admin/controllers/product/list.php</file>
+            <file>file:/var/www/html/titi/admin/controllers/product/remove.php</file>
+            <file>file:/var/www/html/titi/models/database/product.php</file>
+            <file>file:/var/www/html/titi/admin/library/product.helper.php</file>
+            <file>file:/var/www/html/titi/admin/controllers/product/edit.php</file>
+            <file>file:/var/www/html/titi/admin/views/product/list.tpl.php</file>
+            <file>file:/var/www/html/titi/admin/views/product/edit.tpl.php</file>
         </group>
     </open-files>
 </project-private>

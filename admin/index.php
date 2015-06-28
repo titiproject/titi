@@ -1,7 +1,8 @@
 <?php
 // load config
 session_start();
-require('../library/define.php');
+require('../config.php');
+require('library/define.php');
 
 // load library
 require_once('../library/error.php');

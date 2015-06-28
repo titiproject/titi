@@ -9,7 +9,6 @@
 			<div id="content-wrap">
 				<?php require_once 'views/page/first-slidebar.php';?>
 				<?php require_once 'views/page/main-content.php';?>
-				<?php require_once 'views/page/second-sidebar.php';?>
 			</div>
 		</div>
 		<?php require_once 'views/page/footer.php';?>

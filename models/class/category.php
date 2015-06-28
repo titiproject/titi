@@ -171,7 +171,7 @@ class CategoryList {
     public function getCategoriesActive() {
         $ds = new CategoryList();
         foreach($this->list as $k => $v) {
-        if ($v->getStatus() == '1') { $ds->add($v);}
+        if ($v->getStatus() == 1) { $ds->add($v);}
         }
         return $ds;
     }
