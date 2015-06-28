@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 28, 2015 at 03:19 PM
+-- Generation Time: Jun 28, 2015 at 03:24 PM
 -- Server version: 5.5.43-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.9
 
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 --
 
 INSERT INTO `categories` (`catid`, `catname`, `modified`, `created`, `author`, `description`, `parentid`, `status`) VALUES
-(1, '', '2015-06-28 14:54:53', '2015-06-27 09:32:30', '1', '', -1, 0),
+(1, 'Sữa cô gái Hà Lan', '2015-06-28 15:23:30', '2015-06-27 09:32:30', '1', 'Sưa', -1, 1),
 (2, 'Sua bot', '2015-06-27 23:49:41', '2015-06-27 11:05:29', '1', 'Bột', -1, 1),
 (3, 'Sữ dê', '2015-06-27 07:27:29', '2015-06-27 07:27:29', '2', '', -1, 1),
 (4, 'SUMO', '2015-06-27 08:06:28', '2015-06-27 08:06:28', '1', 'sumo Sữa', -1, 1),
