@@ -311,9 +311,9 @@ a.more-link:hover {text-decoration: underline;}
 /** product new **/
 
 /** Scroll bar **/
-.frame { height: 232px; line-height: 232px; overflow: hidden; margin-top:5px;}
+.frame { height: 240px; line-height: 232px; overflow: hidden; margin-top:5px;}
 .frame ul {list-style: none; margin: 0; padding: 0; height: 100%;font-size: 50px;}
-.frame ul li { float: left;   margin: 0 1px 0 0; padding: 0; background: #fff; 
+.frame ul li { float: left;   margin: 0 1px 0 0; padding: 0; background: #fff; height: 240px;
   text-align: center; cursor: pointer;}
 .frame ul li.active {color: #fff; background: rgba(0,0,0,.09);} //note
 .controls { margin: 25px 0;text-align: center;}
