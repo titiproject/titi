@@ -61,7 +61,7 @@ class AccountList {
     public function __construct() {
         $this->list = array();
     }
-    /* return count array */
+    /** @return count array */
     public function count() {
         return count($this->list);
     }

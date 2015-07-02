@@ -62,8 +62,8 @@ function showTBodyProducts($proList,$catList, $cusList) {
         echo "<td>".showDateCurrent($v->getCreated())."</td>";
         echo "<td>".showDateCurrent($v->getModified())."</td>";
         echo "<td>".$v->getDescription()."</td>";
-        echo "<td>".showCategoryProductList($v->getCatid(), $catList)."</td>";
-        echo "<td>";
+        echo "<td style='width:100px;'>".showCategoryProductList($v->getCatid(), $catList)."</td>";
+        echo "<td style='width:70px;'>";
         // edit
         echo "<form id='frmEdit".$v->getProid()."' name='frmEdit' action='index.php?controller=product&action=edit' method='post'>";
         echo "<input type='hidden' name='proid' value='".$v->getProid(),"'/>";

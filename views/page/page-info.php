@@ -1,4 +1,15 @@
 <div id="page-info" style="width: 100%;">
+    <div id="categoryId" class="widget">
+                    <h2><?php echo checkControllerActionHome($controller, $action)?"Các loại sản phẩm":"Site Naviagtion"; ?></h2>
+                    <?php echo showCategory($catList);?>
+                    <!--<ul id="menu-categories-menu">-->
+                        <!--<li><a href="#">Home Page</a></li>-->
+                        <!--<li><a href="#">About</a></li>-->
+                        <!--<li><a href="#">FAQs</a></li>-->
+                        <!--<li><a href="#">Forum</a></li>-->    
+                    <!--</ul>-->
+                    
+    </div>
     <div id="featured">
                 <div id="accordion">
                     <dl class="easy-accordion">

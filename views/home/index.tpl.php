@@ -1,17 +1,12 @@
 <!DOCTYPE unspecified PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<?php require_once 'views/page/head.php';?>
+	<?php require_once 'views/pages/head.php';?>
 	<body>
-		<div id="page-wrap">
-			<?php require_once 'views/page/header.php';?>
-			<?php require_once 'views/page/menu.php';?>
-			<?php require_once 'views/page/page-info.php';?>
-			<div id="content-wrap">
-				<?php require_once 'views/page/first-slidebar.php';?>
-				<?php require_once 'views/page/main-content.php';?>
-			</div>
-		</div>
-		<?php require_once 'views/page/footer.php';?>
-		<?php require_once 'views/page/include.php';?>
+		<div id="wrapper">
+                    <?php require_once 'views/pages/header.php';?>
+                    <?php require_once 'views/pages/breadcum.php';?>
+                    <?php require_once 'views/pages/content.php';?>       
+                    <?php require_once 'views/pages/footer.php';?>
+                </div><!-- end page-wrap -->
 	</body>
 </html>

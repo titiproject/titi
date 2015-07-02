@@ -4,7 +4,7 @@
 
 
 // truyền dữ liệu qua view
-$title = 'titi | Trang chủ';
+$title = ' Trang chủ';
 //$product = get_test_prodct();
 
 

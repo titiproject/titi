@@ -1,0 +1,445 @@
+html { font-family: arial,sans-serif;}
+#wrapper {background:#fff;}
+#sidebar {background:red;}
+#content {background:blue;}
+#post .pro p {color:#900;}
+ul {list-style-type: none;}
+#post .pro p a:hover  { color:red;}
+#main-menu ul {margin:0px;padding: 0;}
+/*lon' hon 980px  */
+@media screen and (min-width: 981px) {
+    #wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #content {
+        width: 65%;
+    }
+    #sidebar {
+        width: 100%;
+    }
+     /*** HEADER ****/
+    #header { width: 100%; }
+    #header-content {width: 100%; height: auto; }
+    #top-header { width: 100%;height: auto; background:#ccc; overflow: hidden;}
+    #top-header .left { float: left;}
+    #top-header .right {float: right; height: auto; margin: 0; padding: 0; margin-top: 1px;}
+    #top-header .left {padding: 5px 10px;margin: 5px;}
+    #top-header .left a { margin: 0 10px;}
+    #top-header .right ul {margin:0; padding: 0;border:none; outline: 0; display: inline-block; }
+    #top-header .right li {display: inline-block; margin: 0; padding: 0; outline: 0; }
+    #top-header .right li a {padding: 8px;  display: inline-block; border: 1px solid #ccc; border-radius: 5px;}
+    #top-header .right li a:hover { border: 1px solid red; color:#fff;}
+
+    #main-header { width: 100%; height: auto; overflow: hidden;}
+    #main-header #logo { float: left;  height: 140px; width: 25%;}
+    #main-header #logo a{ display: block;margin: 20px; }
+    #main-header #logo a h2 { font-size: 36pt; text-align: center; font-weight: bolder;text-shadow: 2px 2px 2px #cc0000;}
+    #logo a:hover { text-decoration: none; color:#ccc;}
+    
+    #main-header .top-search { float: left; height:120px; width: 20%;}
+    #main-header .menu-header {display: block;margin: 10px; float: right;}
+    #main-header .menu-header ul {display: block;}
+    #main-header .menu-header li {display: inline-block;}
+    #main-header .menu-header li a {display: inline-block; padding: 10px; border:1px solid red;}
+
+
+    .fixed {position: fixed; top:0; left: 0; width: 100%;}
+
+    #nav { background: #003300;  padding-top: 10px; padding-bottom: 10px; display: none;}
+    .nav-header {display: none; height: 40px;padding-right: 10px; padding-left: 10px; }
+    .nav-header a {float: left; font-size: 18pt; margin: 2px 5px; }
+    .nav-header #nav-toggle-menu,.nav-header #nav-toggle-user,.nav-header #nav-toggle-cart { 
+    	float: right; background:#030; 
+    	border:1px solid #093; color:#093; 
+    	padding:5px 10px; border-radius:5px; margin-left: 4px;
+    	cursor: pointer;
+    }
+
+    /** an di cac thanh menu **/
+    #nav {display: none;}
+    #nav-toggle-user, #nav-toggle-menu, #nav-toggle-cart {display: none;}
+    .nav-header {display: none;}
+    #nav-toggle-menu
+    .nav-header #nav-toggle-menu:hover,.nav-header #nav-toggle-user:hover,.nav-header #nav-toggle-cart:hover { 
+    	color:#fff; border: 1px solid #fff;
+    }
+    #nav a{ color:#093; text-decoration: none;}
+    #nav a:hover{ color:#fff;}
+    .nav-content { display: none; height: auto; width: 10%; position: absolute; background-color: #030;top:60px; right: 68px;}
+    .nav-content li { display: block;}
+    .nav-content li>a {display: block;padding:5px 10px; border-top:1px solid #000;border-bottom:1px solid #000; margin-bottom:-1px; color:#093;text-align: right;}
+    .nav-content li>a:hover {border-top:1px solid #fff; border-bottom:1px solid #fff; }
+    .nav-content li:last-child>a {border-top:1px solid #000; border-bottom: none; }
+    .nav-content li:last-child>a:hover {border-top:1px solid #fff; border-bottom: none; }
+    .nav-show { display: block;}
+    /*** BREAD CUM **/  
+    #breadcum { width: 99%; border-top: 2px solid #ccc; overflow: hidden; height: 30px; padding: 5px;}
+    #breadcum a { margin-right:5px; }
+    a:hover { text-decoration: underline; color: darkblue;}
+
+    /**CONTENT PART ***/
+    #content { width:100%; background-color: #fff;  overflow: hidden;}
+      /** MENU PART **/
+    #content .left { width: 14.5%;  float: left;}
+    #main-menu { width: 95%; }
+    #main-menu hr { border: 2px solid red; margin-top: 6px; width: 90%;}
+    #main-menu li a { width: 98%; display: block;  padding: 7px 14px; font-size: 10pt; }
+    #main-menu li a i {color:#fff;}
+    #main-menu li a:hover i {color: #000;}
+    #main-menu li a:hover { text-decoration: underline; color: darkblue;}
+    #main-menu p { display: block; font-size: 12pt;text-align: center;  text-transform: uppercase; font-weight: bold; padding: 10px 0;}
+    #main-menu p i { display: none;}
+	#content #post { width: 84%; overflow: hidden;  margin: o auto; float: left;}
+
+    #content .cat { width: 99%;padding: 5px; overflow: hidden; margin-bottom: 10px; position: relative;}
+    .cat hr { margin-top: 1px; padding: 0; border: 2px solid red; }
+    .cat h2 { font-size: 16pt; font-weight: bold; text-transform: uppercase; display: block; float: left;}
+    .cat ul.menu-ngang { width: 100%; }
+    .cat ul.menu-ngang li { display: inline-block; }
+    .cat ul.menu-ngang li a { display: inline-block; padding: 5px;margin-left: 5px; font-size: 10pt;}
+    .cat .sosp { font-size:10pt;display: block;border: 1px solid red; width: 100px; padding: 5px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;position: absolute; top: 9px; right: 1px;}
+
+	#content #info {width: 15%; height: 500px; border: 1px solid red; float: left;}	
+	#post .pro { width: 23%;  height: 45%;background-color: #fff; border:1px solid #fff;  float: left; margin:5px 5px; padding: 0 2px; border-radius: 20px; border:1px solid red;}
+	#post .pro:hover { border:1px solid #ccc; border-radius: 5px;}
+	#post .pro img { margin:0 10%;width: 75%; height: 75%;  }
+	#post .pro p { font-size: 10pt; text-align: center; line-height: 1.42;}
+	.pro p.title { color: red;}
+	a {color:#000; text-decoration: none;}
+	#footer {padding: 7px;text-align: center;}
+}
+/* 980px hoặc nhỏ hơn */
+@media screen and (max-width: 980px) {
+    #wrapper {
+        width: 100%;
+    }
+    #content {
+        width: 65%;
+    }
+    #sidebar {
+        width: 30%;
+    }
+     /*** HEADER ****/
+    #header { width: 100%; }
+    #header-content {width: 100%; height: auto; }
+    #top-header { width: 100%;height: auto; background:#ccc; overflow: hidden;}
+    #top-header .left { float: left;}
+    #top-header .right {float: right; height: auto; margin: 0; padding: 0; margin-top: 1px;}
+    #top-header .left {padding: 5px 10px;margin: 5px;}
+    #top-header .left a { margin: 0 10px;}
+  	#top-header .right ul {margin:0; padding: 0;border:none; outline: 0; display: inline-block; }
+    #top-header .right li {display: inline-block; margin: 0; padding: 0; outline: 0; }
+    #top-header .right li a {padding: 8px;  display: inline-block; border: 1px solid #ccc; border-radius: 5px;}
+    #top-header .right li a:hover { border: 1px solid red; color:#fff;}
+
+
+    #main-header { width: 100%; height: auto; overflow: hidden;}
+    #main-header #logo { float: left; height: 140px; width: 25%; }
+    #main-header #logo a h2 { font-size: 36pt; text-align: center; font-weight: bolder;text-shadow: 2px 2px 2px #cc0000;}
+    #logo a:hover { text-decoration: none; color:#ccc;}
+
+    #main-header .top-search { float: left; height:120px;width: 20%;}
+    #main-header .menu-header {display: block;margin: 10px; float: right;}
+    #main-header .menu-header ul {display: block;}
+    #main-header .menu-header li {display: inline-block;}
+    #main-header .menu-header li a {display: inline-block; padding: 10px; border:1px solid red;}
+
+    .fixed {position: fixed; top:0; left: 0;
+        width: 100%;}
+        /** an di cac thanh menu **/
+    #nav-toggle-user, #nav-toggle-menu, #nav-toggle-cart {display: block;}
+    #nav { background: #003300;  padding-top: 10px; padding-bottom: 10px; display: none;}
+    .nav-header {display: none; height: 40px;padding-right: 10px; padding-left: 10px;}
+    .nav-header a {float: left; font-size: 18pt; margin: 2px 5px; }
+    .nav-header #nav-toggle-menu,.nav-header #nav-toggle-user,.nav-header #nav-toggle-cart { 
+    	float: right; background:#030; 
+    	border:1px solid #093; color:#093; 
+    	padding:5px 10px; border-radius:5px; margin-left: 4px;
+    	cursor: pointer;
+    }
+    .nav-header #nav-toggle-menu:hover,.nav-header #nav-toggle-user:hover,.nav-header #nav-toggle-cart:hover { 
+    	color:#fff; border: 1px solid #fff;
+    }
+    #nav a{ color:#093; text-decoration: none;}
+    #nav a:hover{ color:#fff;}
+
+    .nav-content { display: none; height: auto; width: 20%; position: absolute; background-color: #030;top:60px; right: 0px;}
+    .nav-content li { display: block;}
+    .nav-content li>a {display: block;padding:5px 10px; border-top:1px solid #000;border-bottom:1px solid #000; margin-bottom:-1px; color:#093;text-align: right;}
+    .nav-content li>a:hover {border-top:1px solid #fff; border-bottom:1px solid #fff; }
+    .nav-content li:last-child>a {border-top:1px solid #000; border-bottom: none; }
+    .nav-content li:last-child>a:hover {border-top:1px solid #fff; border-bottom: none; }
+    .nav-show { display: block;}
+    /*** BREAD CUM **/  
+    #breadcum { width: 99%; border-top: 2px solid #ccc; overflow: hidden; height: 30px; padding: 5px;}
+    #breadcum a { margin-right:5px; }
+    a:hover { text-decoration: underline; color: darkblue;}
+    /**CONTENT PART ***/
+    #content { width:99.5%; background-color: #fff;  overflow: hidden;}
+       /** MENU PART **/
+    #content .left { width: 14.5%;  float: left;}
+    #main-menu { width: 95%; }
+    #main-menu hr { border: 2px solid red; margin-top: 12px; width: 90%;}
+    #main-menu li a { width: 98%; display: block;  padding: 7px 14px; font-size: 10pt; }
+    #main-menu li a i {color:#fff;}
+    #main-menu li a:hover i {color: #000;}
+    #main-menu li a:hover { text-decoration: underline; color: darkblue;}
+    #main-menu p { display: block; font-size: 10pt;text-align: center;  text-transform: uppercase; font-weight: bold; padding: 10px 0;}
+    #main-menu p i { display: none;}
+
+	#content #post { width: 84%; overflow: hidden;  margin: o auto; float: left;}
+
+    #content .cat { width: 99%;padding: 5px; overflow: hidden; margin-bottom: 10px; position: relative;}
+    .cat hr { margin-bottom: 5px; padding: 0; border: 2px solid red; }
+    .cat h2 { font-size: 16pt; font-weight: bold; text-transform: uppercase; display: block; float: left; display: block; width: 100%;}
+    .cat ul.menu-ngang { width: 100%; }
+    .cat ul.menu-ngang li { display: inline-block; }
+    .cat ul.menu-ngang li a { display: inline-block; padding: 5px;margin-left: 5px; font-size: 10pt;}
+    .cat .sosp { font-size: 10pt;display: block;border: 1px solid red; width: 100px; padding: 5px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;position: absolute; top: 17px; right: 1px;}
+
+	#content #info {width: 19%; height: 500px; border: 1px solid red; float: left;}	
+	#post .pro { width: 30%;  height: 45%;background-color: #fff; border:1px solid #fff;  float: left; margin:5px 5px; padding: 0 2px; border-radius: 30px;}
+	#post .pro:hover { border:1px solid #ccc; border-radius: 5px;}
+	#post .pro img { margin:0 10%;width: 75%; height: 75%;  }
+	#post .pro p { font-size: 10pt;text-align: center; line-height: 1.42;}
+	.pro p.title { color: red;}
+	a {color:#000; text-decoration: none;}
+	#footer {padding: 7px;text-align: center;}
+
+}
+/* 700px hoặc nhỏ hơn */
+@media screen and (max-width: 768px) {
+	#wrapper {width: 100%;}
+    #content {
+        width: auto;
+        float: none;
+    }
+    #sidebar {
+        width: auto;
+        float: none;
+    }
+    /** HEADER **/
+    #top-header .left {padding:0;margin: 0px; height: 27px; width: 50%;}
+    #top-header .left a span { }
+    #top-header .right li a,#top-header .left a {padding: 4px;  display: inline-block; border: 1px solid #ccc; border-radius: 5px; margin: 0;}
+    #top-header .right li a:hover,#top-header .left a:hover { border: 1px solid red; color:#fff;}
+
+    #main-header { width: 100%; height: auto; overflow: hidden; z-index: 1000;background: #fff;}
+    #main-header #logo { float: left; height: 140px; width: 25%; }
+    #main-header #logo a h2 { font-size: 36pt; text-align: center; font-weight: bolder;text-shadow: 2px 2px 2px #cc0000;}
+    #logo a:hover { text-decoration: none; color:#ccc;}
+
+    #main-header .top-search { float: left; height:120px;}
+    #main-header .menu-header {display: block;margin: 10px; float: right;}
+    #main-header .menu-header ul {display: block;}
+    #main-header .menu-header li {display: inline-block;}
+    #main-header .menu-header li a {display: inline-block; padding: 3px; border:1px solid red;}
+
+    .fixed-top {position: fixed; top:0; left: 0;
+        width: 100%; height: 50px;}
+    .fixed {position: fixed; top:27px; left: 0;
+        width: 100%;}
+                /** an di cac thanh menu **/
+    #nav-toggle-user, #nav-toggle-menu, #nav-toggle-cart {display: block;}
+    #nav { background: #003300;  padding-top: 10px; padding-bottom: 10px; display: none;}
+    .nav-header {display: none; height: 40px;padding-right: 10px; padding-left: 10px;}
+    .nav-header a {float: left; font-size: 18pt; margin: 2px 5px; }
+    .nav-header #nav-toggle-menu,.nav-header #nav-toggle-user,.nav-header #nav-toggle-cart { 
+    	float: right; background:#030; 
+    	border:1px solid #093; color:#093; 
+    	padding:5px 10px; border-radius:5px; margin-left: 4px;
+    	cursor: pointer;
+    }
+    .nav-header #nav-toggle-menu:hover,.nav-header #nav-toggle-user:hover,.nav-header #nav-toggle-cart:hover { 
+    	color:#fff; border: 1px solid #fff;
+    }
+    #nav a{ color:#093; text-decoration: none;}
+    #nav a:hover{ color:#fff;}
+    .nav-content { display: none; height: auto; width: 30%; position: absolute; background-color: #030;top:60px; right: 0px;}
+    .nav-content li { display: block;}
+    .nav-content li>a {display: block;padding:5px 10px; border-top:1px solid #000;border-bottom:1px solid #000; margin-bottom:-1px; color:#093;text-align: right;}
+    .nav-content li>a:hover {border-top:1px solid #fff; border-bottom:1px solid #fff; }
+    .nav-content li:last-child>a {border-top:1px solid #000; border-bottom: none; }
+    .nav-content li:last-child>a:hover {border-top:1px solid #fff; border-bottom: none; }
+    .nav-show { display: block;}
+    /*** BREAD CUM **/  
+    #breadcum { width: 99%; border-top: 2px solid #ccc; overflow: hidden; height: 30px; padding: 5px;}
+    #breadcum a { margin-right:5px; }
+    a:hover { text-decoration: underline; color: darkblue;}
+
+
+        .nav-content-height { top: 57px;} 
+    #content { width:99.5%; background-color: #fff;  overflow: hidden;}
+       /** MENU PART **/
+    #content .left { width: 25%;  float: left;}
+    #main-menu { width: 95%; }
+    #main-menu hr { border: 2px solid red; margin-top: 12px; width: 90%;}
+    #main-menu li a { width: 98%; display: block;  padding: 7px 14px; font-size: 10pt;  }
+    #main-menu li a i {color:#fff;}
+    #main-menu li a:hover i {color: #000;}
+    #main-menu li a:hover { text-decoration: underline; color: darkblue;}
+    #main-menu p { display: block; font-size: 10pt;text-align: center;  text-transform: uppercase; font-weight: bold; padding: 10px 0;}
+
+
+	#content #post { width: 70%; overflow: hidden;  margin: 0 auto; float: left; }	
+    .cat ul.menu-ngang { margin-top: 5px;}
+    .cat ul.menu-ngang li a { display: inline-block; padding: 2px;margin-left: 2px; }
+
+	#post .pro { width: 30%;  height: 30%;background-color: #fff; border:1px solid #fff;  float: left; margin:5px 5px; padding: 0 2px; border-radius: 30px;}
+	#post .pro:hover { border:1px solid #ccc; border-radius: 5px;}
+	#post .pro img { margin:0 10%;width: 75%; height: 70%;  }
+	#post .pro p { text-align: center; line-height: 0.5;}
+	.pro p.title { color: red;}
+	a {color:#000; text-decoration: none;}
+	#footer {padding: 7px;text-align: center;}
+}
+@media screen and (max-width: 640px) {
+	#nav {display: block;}
+	#nav-header {display: block;}
+	#header-content #main-header  {display: none;}
+	#nav-toggle-user, #nav-toggle-menu, #nav-toggle-cart {display: block;}
+    #nav { background: #003300;  padding-top: 10px; padding-bottom: 10px; display: block;}
+    .nav-header {display: block; height: 40px;padding-right: 10px; padding-left: 10px;}
+    .nav-header a {float: left; font-size: 18pt; margin: 2px 5px; }
+    .nav-header #nav-toggle-menu,.nav-header #nav-toggle-user,.nav-header #nav-toggle-cart { 
+    	float: right; background:#030; 
+    	border:1px solid #093; color:#093; 
+    	padding:5px 10px; border-radius:5px; margin-left: 4px;
+    	cursor: pointer;
+    }
+    .nav-header #nav-toggle-menu:hover,.nav-header #nav-toggle-user:hover,.nav-header #nav-toggle-cart:hover { 
+    	color:#fff; border: 1px solid #fff;
+    }
+    #nav a{ color:#093; text-decoration: none;}
+    #nav a:hover{ color:#fff;}
+        .nav-content-height { top: 57px !important ;} 
+    .nav-content { display: none; height: auto; width: 30%; position: absolute; background-color: #030;top:87px; right: 0px;}
+    .nav-content li { display: block;}
+    .nav-content li>a {display: block;padding:5px 10px; border-top:1px solid #000;border-bottom:1px solid #000; margin-bottom:-1px; color:#093;text-align: right;}
+    .nav-content li>a:hover {border-top:1px solid #fff; border-bottom:1px solid #fff; }
+    .nav-content li:last-child>a {border-top:1px solid #000; border-bottom: none; }
+    .nav-content li:last-child>a:hover {border-top:1px solid #fff; border-bottom: none; }
+    #main-menu p i {display: none;}
+    /*** BREAD CUM **/  
+    #breadcum { width: 99%; border-top: 2px solid #ccc; overflow: hidden; height: 30px; padding: 5px;}
+    #breadcum a { margin-right:5px; }
+    a:hover { text-decoration: underline; color: darkblue;}
+    
+    #post .pro { width: 30%;  height: 30%;background-color: #fff; border:1px solid #fff;  float: left; margin:5px 5px; padding: 0 2px; border-radius: 30px;}
+	#post .pro:hover { border:1px solid #ccc; border-radius: 5px;}
+	#post .pro img { margin:0 10%;width: 75%; height: 75%;  }
+	#post .pro p { text-align: center; line-height: 1.42;}
+}
+
+/*  480px hoặc nhỏ hơn */
+/*@media screen and (max-width: 480px) {*/
+
+@media screen and (max-width: 480px) {
+
+    #header {
+        width: 100%;
+        height: auto;
+        position: relative;
+
+    }
+    .fixed-top {position: fixed; top:0; left: 0;
+        width: 100%;}
+    .fixed {position: fixed; top:27px; left: 0;
+        width: 100%;}
+    h1 {
+        font-size: 24px;
+    }
+    #sidebar {
+        display: none;
+    }
+    #top-header {height: 27px; width: 100%; overflow: hidden;}
+    #top-header .left {width: 30%;}
+    #top-header .left a span { display: none; }
+    #top-header .right li a,#top-header .left a {padding: 4px;  display: inline-block; border: 1px solid #ccc; border-radius: 5px; margin: 0;}
+    #top-header .right li a:hover,#top-header .left a:hover { border: 1px solid red; color:#fff;}    
+    #main-header { display: none;}
+            /** an di cac thanh menu **/
+    #nav-toggle-user, #nav-toggle-menu, #nav-toggle-cart {display: block;}
+    #nav { background: #003300;  padding-top: 10px; padding-bottom: 10px; display: block;}
+    .nav-header {display: block; height: 40px;padding-right: 10px; padding-left: 10px;}
+    .nav-header a {float: left; font-size: 18pt; margin: 2px 5px; }
+    .nav-header #nav-toggle-menu,.nav-header #nav-toggle-user,.nav-header #nav-toggle-cart { 
+    	float: right; background:#030; 
+    	border:1px solid #093; color:#093; 
+    	padding:5px 10px; border-radius:5px; margin-left: 4px;
+    	cursor: pointer;
+    }
+    .nav-header #nav-toggle-menu:hover,.nav-header #nav-toggle-user:hover,.nav-header #nav-toggle-cart:hover { 
+    	color:#fff; border: 1px solid #fff;
+    }
+    #nav a{ color:#093; text-decoration: none; position: relative;}
+    .nav-content-height { top: 57px !important ;}
+    #nav a:hover{ color:#fff;}
+    .nav-content-height { top: 57px !important ;}       
+    .nav-content { display: none; height: auto; width: 100%; position: absolute; top:77px; left:0; }
+    .nav-content li { display: block; }
+    .nav-content li>a {display: block;padding:5px 10px;border-bottom:1px solid #000; margin-left:100px; color:#093; text-align: center;}
+    .nav-content li>a:hover { color:#fff;}
+    .nav-content li:last-child>a {border-top:1px solid #000; border-bottom: none; }
+    .nav-content li:last-child>a:hover {border-top:1px solid #fff; border-bottom: none; }
+    .nav-show { display: block;}
+
+    /*** BREAD CUM **/  
+    #breadcum { width: 99%; border-top: 2px solid #ccc; overflow: hidden; height: 30px; padding: 5px;}
+    #breadcum a { margin-right:5px; }
+    a:hover { text-decoration: underline; color: darkblue;}
+
+
+    #content { width:99.5%; background-color: #fff;  overflow: hidden;}
+       /** MENU PART **/
+    #content .left { width: 100%;   float: left;}
+    #content #post { width: 100%; overflow: hidden;  margin: o auto; float: left; }  
+    .cat ul.menu-ngang { margin-top: 5px;}
+    .cat ul.menu-ngang li a { display: inline-block; padding: 2px;margin-left: 2px; }
+    #main-menu { width: 99.5%; }
+    #main-menu hr { border: 2px solid red; margin-top: 12px; width: 90%; display: none;}
+    #main-menu ul { width: 100%; display: none;}
+    #main-menu li a { width: 98%; display: block;  padding: 7px 14px; font-size: 10pt;  }
+    #main-menu li a i {color:#fff;}
+    #main-menu li a:hover i {color: #000;}
+    #main-menu li a:hover { text-decoration: underline; color: darkblue;}
+    #main-menu p { display: block; font-size: 10pt;text-align: center;  text-transform: uppercase; font-weight: bold; padding: 10px 0;
+        border: 2px solid #ccc;border-radius: 5px; margin-left: 1px;
+    }
+    #main-menu p i {display: inline-block; }
+
+    .cat h2 { font-size: 12pt;}
+    #maiin-menu #post {width: 100%;}
+	#post .pro { margin-left:7px;width: 45%;  height: 45%;background-color: #fff;  margin-top:10px;}
+	#post .pro:first-child {margin: 0;}
+	#post .pro img { margin:0 10%;width: 75%; height: 70%;  }
+	#post .pro p { font-size: 11pt;text-align: center; line-height: 1.42;}
+	.pro p.title { color: red;}
+	a {color:#000; text-decoration: none;}
+	#footer {padding: 7px;text-align: center;}
+
+}
+@media screen and (max-width: 300px) {
+	        /** hien di cac thanh menu **/
+    #nav-toggle-user, #nav-toggle-menu, #nav-toggle-cart {display: block;}
+	#nav { padding-top: 5px; padding-bottom: 5px;}
+	.nav-header { font-size: 16pt; height: 25px;margin-bottom:4px;}
+	.nav-header #nav-toggle-menu,.nav-header #nav-toggle-user,.nav-header #nav-toggle-cart {
+		padding: 4px 5px;
+	}
+    .nav-content-height { top: 57px !important ;}
+	.nav-content { display: none; height: auto; width: 100%; position: absolute; top:65px; left:0;}
+	.nav-content li>a { font-size: 9pt;padding: 2px 5px; text-align: left;}
+
+	#content { width: 100%;background-color: #fff;}
+	#content #post { width: 94%; }
+	#post .pro { margin-left:7px;width: 100%;  height: 120%;background-color: #fff;  margin-top:10px;}
+	#post .pro:first-child {margin: 0;}
+	#post .pro img { margin:0 10%;width: 75%; height: 70%;  }
+	#post .pro p { text-align: center; line-height: 1.42;}
+	.pro p.title { color: red;}
+	a {color:#000; text-decoration: none;}
+	#footer {padding: 7px;text-align: center;}
+
+}

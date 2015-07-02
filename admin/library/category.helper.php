@@ -65,10 +65,12 @@ function showAuthorCategory($authorid, $cusList) {
 function showDateCurrent($date) {
    $data = compareCurrentDate($date);
    $str = "";
+   
    if ($data['mday'] != 0) $str = $data['mday'].' ngày '; else $str = "";
    if ($data['hours'] != 0) $str.= $data['hours'].' giờ'; else $str .= "";
    if ($data['minutes'] != 0) $str.= $data['minutes'].' phút'; else $str .= "";
-   if ($str == "") $str ="mới vừa thêm"; else $str .= " trước";
+   if ($data['hours'] > 10) $str = "quá dài";
+   if ($str == "") $str ="mới vừa thêm"; else $str .= " ";;
     return $str;
 }
 function showData($d) {

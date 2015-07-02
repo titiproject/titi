@@ -1,0 +1,7 @@
+{
+    "name": "titi",
+    "sửa":" theo cấu trúc này",
+    "admin": "tất cả class đều kế thừa từ admin",
+    "client":"phải thông qua class phụ",
+    "Error":"Tạo class quản lý lỗi"
+}

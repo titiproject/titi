@@ -16,6 +16,8 @@ class Product {
     private $description;
     private $catid;
     private $status;
+    private $netweight;
+    private $provider;
 
     public function getProid() {return $this->proid;}
     public function getProname() {return $this->proname;}
@@ -27,6 +29,8 @@ class Product {
     public function getDescription() {return $this->description;}
     public function getAuthor() {return $this->author;}        
     public function getStatus() {return $this->status;}
+    public function getNetweight() {return $this->netweight;}
+    public function getProvider() {return $this->provider;}
     
     public function setProid($proid) { $this->proid = $proid;}    
     public function setProname($proname) { $this->proname = $proname;}
@@ -37,7 +41,9 @@ class Product {
     public function setAuthor($author) { $this->author = $author;}
     public function setStatus($status) { $this->status = $status;}
     public function setImage($image) { $this->image = $image;}
+    public function setProvider($provider) { $this->provider = $provider;}
     public function setPrice($price) { $this->price = $price;}
+    public function setNetweight($netweight) { $this->netweight = $netweight;}
     
     
     public function __construct() {
@@ -89,7 +95,7 @@ class ProductList {
         return count($this->list);
     }
     public function add($product) {
-        if (!is_a($product, 'Product')) return false;
+        if (!is_a($product, 'Product')) {return false;}
         $pro = $this->find($product);
         if (!$pro) {
             $this->list[$product->getProid()] = $product;
@@ -177,17 +183,31 @@ class ProductList {
         }
     }
 /**
- * getProductsActive()
+ * getProductsActive($catid)
+ *  get all Products have status = 1  => show 
+ * @param (string) $catid
+ * @return (List Product) object 
+ */
+    public function getProductsActive($catid) {
+        $ds = new ProductList();
+        foreach($this->list as $k => $v) {
+        if ($v->getStatus() == '1' && $v->getCatid() == $catid) { $ds->add($v);}
+        }
+        return $ds->getList();
+    }
+    /**
+ * getProductsActive($catid)
  *  get all Products have status = 1  => show 
  * @param (none) no param
- * @return (CategoryList) object 
+ * @return (List Product) object 
  */
-    public function getProductsActive() {
-        $ds = new CategoryList();
+    public function getProductsActiveDefault() {
+        $ds = new ProductList();
         foreach($this->list as $k => $v) {
-        if ($v->getStatus() == '1') { $ds->add($v);}
+        if ($v->getStatus() == '1') { 
+            $ds->add($v);}
         }
-        return $ds;
+        return $ds->getList();
     }
 
 }

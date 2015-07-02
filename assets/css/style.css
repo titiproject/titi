@@ -36,7 +36,8 @@
     */
     h1, h2, h3, h4, h5 {}
     a img { border: 0; }
-    a { color: #ce9702; text-decoration: none;}
+    a { color: blueviolet; text-decoration: none;}
+    a:hover {color: blue;}
     .zoomer:active { top: 0; }
 } /* end screen */
 
@@ -110,8 +111,12 @@
     float: left;
     margin: 25px 0px; overflow:hidden;/* fix l?i m?t d? cao */
 }
+#categoryId {
+    float: left;
+    width: 200px;
+}
 #featured {
-    float: left;overflow: hidden;
+    float: right;overflow: hidden;
 }
 #facebook { float:right; }
 /***** ACCORDION ******/
@@ -186,7 +191,7 @@ dd p{line-height:150%}
     border-bottom: 1px solid #bcd4da;
 }
 #main-content h2 a { color: white; }
-.post { position: relative;} /* Để cho comment position: absolute*/
+.post { position: relative;height: 310px;} /* Để cho comment position: absolute*/
 .post h3 { margin: 18px 0 0 158px; font-size: 18px;}
 .post h3 a:hover { text-decoration: underline;}
 .post img { float: left; margin: 0 15px;}
@@ -248,24 +253,43 @@ a.more-link:hover {text-decoration: underline;}
     color: #ce9702;
 }
 /** FOOTER **/
+/*** FOOTER ***/
 #footer {
-    position: relative;
-    border-top: 4px solid #359cc3;
-    height: 120px; line-height: 120px;/* Canh chỉnh nội dung chữ ra giữa*/
-    background:url(../images/footer-bg.jpg) repeat top left;
-    clear: both;
+    margin:10px 100px;
+    overflow: hidden;
+    padding: 10px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    background-color: #3b7c33; /* Fallback */
+    border-radius: 10px;
+    /* Safari 4+, Chrome 1-9 */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5fae53), to(#3b7c33));
+    /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+    background-image: -webkit-linear-gradient(top, #5fae53, #3b7c33);
+    /* Firefox 3.6+ */
+    background-image: -moz-linear-gradient(top, #5fae53, #3b7c33);
+    /* IE 10+ */
+    background-image: -ms-linear-gradient(top, #5fae53, #3b7c33);
+    /* Opera 11.10+ */
+    background-image: -o-linear-gradient(top, #5fae53, #3b7c33);
+    border: 1px solid #336c2b;
 }
-#footer p {
-    text-align: center;
-    color: #848484;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-#footer img {
-    position: absolute;
-    right: 370px;
-    top:30px;
-}
+.f-one,.f-second {
+    float: left;
+    margin-right:10px;
+}.f-one {width: 30%;}.f-second {width: 65%;}
+.f-one tr td {font-size: 11pt;}
+.footer p {margin: 0; padding: 0; line-height: 1.4; }
+.f-second p.title,.f-one p.title {display: block;line-height: 1.4;font-size: 13pt;margin:10px; }
+.f-one input[type='text'],.f-one textarea {width: 80%;}
+.f-second ul {margin: 0;padding: 0;}
+.f-second ul li{ line-height: 1.4; font-size: 10pt; }
+.f-second ul li a {color:#ccc;}
+.f-second ul li a:hover {color:#000;}
+.ff-one:first-child {border: none;}
+.ff-one { width: 30%;float: left;border-left:1px solid #ccc;margin-left:10px;padding-left:10px;padding-bottom: 5px;}
+.ff-one p {font-size: 12pt;}
+.f-second p {line-height: 1.4;}
 /** SEARCH BOX **/
 #searchBox {
     margin: 5px 0 0;
@@ -311,9 +335,9 @@ a.more-link:hover {text-decoration: underline;}
 /** product new **/
 
 /** Scroll bar **/
-.frame { height: 240px; line-height: 232px; overflow: hidden; margin-top:5px;}
+.frame { height: 300px; line-height: 300px; overflow: hidden; margin-top:5px;}
 .frame ul {list-style: none; margin: 0; padding: 0; height: 100%;font-size: 50px;}
-.frame ul li { float: left;   margin: 0 1px 0 0; padding: 0; background: #fff; height: 240px;
+.frame ul li { float: left;   margin: 0 1px 0 0; padding: 0; background: #fff; height: 290px;
   text-align: center; cursor: pointer;}
 .frame ul li.active {color: #fff; background: rgba(0,0,0,.09);} //note
 .controls { margin: 25px 0;text-align: center;}
@@ -325,7 +349,11 @@ a.more-link:hover {text-decoration: underline;}
 .btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
   color: #333;background-color: #f5f5f5;}
 .btn.disabled, .btn[disabled] {cursor: default;background-image: none;opacity: 0.65;filter: alpha(opacity=65);}
-
+//.pro img {display: block; width: 210px; height: 200px;}
+//.pro p { display: block; width:200px;font-size: 10pt; color:red; line-height: 1.4;}
 /**Text product **/
-.pro img {display: block; width: 150px; height: 200px;}
-.pro p { font-size: 10pt; color:red; line-height: 1.4;}
+.pro {float: left; width: 180px; height: 260px;margin:2px 2px;border:1px solid #fff;}
+.pro:hover {border:1px solid #ccc; border-radius:5px;}
+.pro img {display: block; width: 160px; height: 200px;}
+.pro p { text-align: center;display: block; width:160px;font-size: 10pt; color:red; line-height: 1.4;}
+

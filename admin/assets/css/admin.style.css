@@ -99,9 +99,11 @@ p {
 #header {
     background:#545454;
     padding:0px 0px;
+    
 }
 #top-bar {
     float:left;
+
 }
 
 #top-bar li {
@@ -142,7 +144,8 @@ p {
     padding:5px 7px;
 }
 /* ==right== */
-#admin-menu, #admin-menu-detail { float: right;}
+
+#admin-menu, #admin-menu-detail { float: right; }
 #admin-menu a { display: block;color: #fff; padding: 3px 7px;}
 #admin-menu .bt { display: block;  }
 #admin-menu .bt img { display: block; background: #000; float:right; margin: 4px; }
