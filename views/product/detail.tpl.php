@@ -32,6 +32,7 @@
                                         <div class="proleft"><img src="admin/assets/images/<?php echo $proDetail->getImage(); ?>"/></div>
                                         <div class="proright">
                                             <?php 
+                                                echo "<p id='cartError' class='message'></p>";
                                                 $urlAddCart = "index.php?controller=cart&action=add&proid=".$proDetail->getProid();
                                                 $urlShowCart = "index.php?controller=cart&action=show&proid=".$proDetail->getProid();
                                                 echo "<p>Tên sản phẩm : ".$proDetail->getProname()."</p>";
@@ -39,11 +40,25 @@
                                                 echo "<p>Hãng sản xuất :Netle </p>";
                                                 echo "<p>Giá: <span style='color:red'>".number_format($proDetail->getPrice())."&nbsp;VND</span></p>";                                             
                                                 echo "<p style='display:none;' id='proid'>".$proDetail->getProid()."</p>";
-                                                echo "<p><a href='".$urlAddCart."'>Them vao gio hang<i class='fa fa-cart-plus fa-lg'></i></a></p>";
+                                                echo "<p><a href='javascript:void();' onclick='addCart(".$proDetail->getProid().")'>Them vao gio hang<i class='fa fa-cart-plus fa-lg'></i></a></p>";
                                                 echo "<p><a href='".$urlShowCart."'>Mua hang<i class='fa fa-shopping-cart fa-lg'></i></a></p>";
                                                 echo "</form>";
                                             ?>
                                         </div>
+                                        <script>
+function addCart(proid) {
+    $.ajax({
+        method: 'POST',
+        url : 'index.php?controller=cart&action=add',
+        data: {proid: proid}
+    }).done(function(data) {
+        data = JSON.parse(data);
+        if (data.error) {
+            
+        }
+    });
+}
+                                        </script>
                                     </div>
                                 </div>
                         </div>

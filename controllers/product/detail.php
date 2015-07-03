@@ -7,5 +7,6 @@
  */
 if (isset($_GET['proid'])) {    $proid = $_GET['proid'];    }
 $proDetail = $proList->findProductId($proid);
-
+$title = "Chi tiết sản phẩm";
+$breadcum = $proDetail->getProname();
 require('views/'.$controller.'/'.$action.'.tpl.php');

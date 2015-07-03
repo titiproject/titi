@@ -101,7 +101,7 @@ ul {list-style-type: none;}
     .cat .sosp { font-size:10pt;display: block;border: 1px solid red; width: 100px; padding: 5px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;position: absolute; top: 9px; right: 1px;}
 
 	#content #info {width: 15%; height: 500px; border: 1px solid red; float: left;}	
-	#post .pro { width: 23%;  height: 45%;background-color: #fff; border:1px solid #fff;  float: left; margin:5px 5px; padding: 0 2px; border-radius: 20px; border:1px solid red;}
+	#post .pro { width: 23%;  height: 30%;background-color: #fff; border:1px solid #fff;  float: left; margin:5px 5px; padding: 0 2px; border-radius: 20px; border:1px solid red;}
 	#post .pro:hover { border:1px solid #ccc; border-radius: 5px;}
 	#post .pro img { margin:0 10%;width: 75%; height: 75%;  }
 	#post .pro p { font-size: 10pt; text-align: center; line-height: 1.42;}
@@ -199,7 +199,7 @@ ul {list-style-type: none;}
     .cat .sosp { font-size: 10pt;display: block;border: 1px solid red; width: 100px; padding: 5px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;position: absolute; top: 17px; right: 1px;}
 
 	#content #info {width: 19%; height: 500px; border: 1px solid red; float: left;}	
-	#post .pro { width: 30%;  height: 45%;background-color: #fff; border:1px solid #fff;  float: left; margin:5px 5px; padding: 0 2px; border-radius: 30px;}
+	#post .pro { width: 30%;  height: 30%;background-color: #fff; border:1px solid #fff;  float: left; margin:5px 5px; padding: 0 2px; border-radius: 30px;}
 	#post .pro:hover { border:1px solid #ccc; border-radius: 5px;}
 	#post .pro img { margin:0 10%;width: 75%; height: 75%;  }
 	#post .pro p { font-size: 10pt;text-align: center; line-height: 1.42;}
@@ -411,7 +411,7 @@ ul {list-style-type: none;}
 
     .cat h2 { font-size: 12pt;}
     #maiin-menu #post {width: 100%;}
-	#post .pro { margin-left:7px;width: 45%;  height: 45%;background-color: #fff;  margin-top:10px;}
+	#post .pro { margin-left:7px;width: 30%;  height: 45%;background-color: #fff;  margin-top:10px;}
 	#post .pro:first-child {margin: 0;}
 	#post .pro img { margin:0 10%;width: 75%; height: 70%;  }
 	#post .pro p { font-size: 11pt;text-align: center; line-height: 1.42;}
@@ -434,7 +434,7 @@ ul {list-style-type: none;}
 
 	#content { width: 100%;background-color: #fff;}
 	#content #post { width: 94%; }
-	#post .pro { margin-left:7px;width: 100%;  height: 120%;background-color: #fff;  margin-top:10px;}
+	#post .pro { margin-left:7px;width: 100%;  height: 80%;background-color: #fff;  margin-top:10px;}
 	#post .pro:first-child {margin: 0;}
 	#post .pro img { margin:0 10%;width: 75%; height: 70%;  }
 	#post .pro p { text-align: center; line-height: 1.42;}
