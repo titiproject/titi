@@ -1,0 +1,6 @@
+- 4-7 => sử dụng thư viện jquery.bPopup.js
+		+ làm thêm giỏ hàng  |  sử dụng ajax
+		+ và xóa giỏ hàng    |  
+- 4 - 7 viết cập nhật giỏ hàng
+		+ Viết thông tin thanh toán
+		+ phân trang   => ok
