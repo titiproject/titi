@@ -25,6 +25,16 @@ and open the template in the editor.
 .messageContent { width: 100%; text-align: center;padding: 5px 0px;}
 .messageButton { vertical-align: middle; text-align: center;}
 .btn-success { padding: 5px;border:1px solid darkblue; background: blue;cursor: pointer;border-radius: 10px;width: 20%; text-align: center;color:#fff;}
+/** SHOW CART **/
+.continue-cart { display: block; padding: 5px; background: darkred;color:#fff; border: 1px solid red; border-radius: 10px; width: 50%;}
+.price { color: red;}
+.continue-cart:hover {color:#ccc;  text-decoration: none;}
+.carttitle {color:#ccc;overflow: hidden;}
+.carttitle li {padding: 10xp; background: darkred;display: block;float: left;width: 45%; border:2px solid red;padding: 10px;}
+.carttitle li:not(:first-child) {margin-left: -2px;}
+.cartlist th { color:#fff;padding:2px;background: darkred;padding:5px;}
+.cartlist td {padding: 2px;text-align: center;vertical-align: middle;}
+
 @media screen and (min-width: 981px) {
 
 
