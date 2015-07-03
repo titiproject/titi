@@ -32,7 +32,12 @@
                                         <div class="proleft"><img src="admin/assets/images/<?php echo $proDetail->getImage(); ?>"/></div>
                                         <div class="proright">
                                             <?php 
-                                                echo "<p id='cartError' class='message'></p>";
+                                                echo "<div id='cartError' class='message' style='width:30%; height:20%; background:#fff;border-radius:10px;display:none;'>";                                                
+                                                echo "<span class='button b-close'><span>X</span></span>";
+                                                echo "<div class='messageTitle'></div>";
+                                                echo "<div class='messageContent'></div>";
+                                                echo "<div class='messageButton'></div>";
+                                                echo "</div>";
                                                 $urlAddCart = "index.php?controller=cart&action=add&proid=".$proDetail->getProid();
                                                 $urlShowCart = "index.php?controller=cart&action=show&proid=".$proDetail->getProid();
                                                 echo "<p>Tên sản phẩm : ".$proDetail->getProname()."</p>";
@@ -53,9 +58,14 @@ function addCart(proid) {
         data: {proid: proid}
     }).done(function(data) {
         data = JSON.parse(data);
-        if (data.error) {
-            
-        }
+        var message = $('.message');
+        $('.messageTitle').text('Thông báo');
+        $('.messageContent').html(data.message);
+        $('#cartError').bPopup({closeClass:'b-close', closeClass:'btn-success'});
+        var width = message.width/2;
+        console.log(width);
+        $('.messageButton').html("<p class='btn-success' style='margin-left:35%;'>OK</p>");
+
     });
 }
                                         </script>

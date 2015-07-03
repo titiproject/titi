@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/reset.css"/>
 	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.pPopup.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/product.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/product.css" />
 </head>
