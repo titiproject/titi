@@ -47,7 +47,7 @@
                                                 echo "<p style='display:none;' id='proid'>".$proDetail->getProid()."</p>";
                                                 echo "<p><a href='javascript:void();' onclick='addCart(".$proDetail->getProid().")'>Them vao gio hang<i class='fa fa-cart-plus fa-lg'></i></a></p>";
                                                 echo "<p><a href='".$urlShowCart."'>Mua hang<i class='fa fa-shopping-cart fa-lg'></i></a></p>";
-                                                echo "</form>";
+                                                
                                             ?>
                                         </div>
                                         <script>

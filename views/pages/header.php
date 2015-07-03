@@ -85,7 +85,8 @@
 					$('#nav-menu').fadeIn();
 					if (mclick) { $('#nav-menu').fadeOut(); mclick = false;}
 					else mclick = true;
-				} if (str =='user') { 
+				} 
+				if (str =='user') { 
 					$('#nav-menu').fadeOut();
 					$('#nav-user').fadeIn();
 					if (uclick) { $('#nav-user').fadeOut(); uclick = false;}

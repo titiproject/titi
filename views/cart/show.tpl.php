@@ -23,25 +23,38 @@
                                     <th>Xóa</th>
                                 </tr>
                             <?php 
-                            foreach($_SESSION['cart'] as $k => $v) {
-                                
+                            foreach($_SESSION['cart'] as $k => $v) {  
                                 $proItem = $proList->findProductId($k);
                                 echo "<tr>";
                                 echo "<td> <img src='admin/assets/images/".$proItem->getImage()."' height='50' width='50'/></td>";
                                 echo "<td><a href='index.php?controller=product&action=detail&proid=".$k."'>".$proItem->getProname()."</a></td>";
-                                echo "<td>$v</td>";
-                                echo "<td>".number_format($proItem->getPrice())."</td>";
+                                echo "<td><input type='text' name='".$k."'value='".$v."' size='4' /></td>";
+                                echo "<td><b>".number_format($proItem->getPrice(),0,".",".")." đ</b></td>";
                                 $tt = $v * $proItem->getPrice();
-                                echo "<td>".number_format($tt)."</td>";
-                                echo "<td><a href='index.php?controller=cart&action=remove&proid=".$proItem->getProid()."'><i class='fa fa-trash fa-lg'></i></a></td>";
+                                echo "<td><b>".number_format($tt,0,".",".")." đ</b></td>";
+                                echo "<td><a href='javascript:void();' id='remove".$proItem->getProid()."'><i class='fa fa-trash fa-lg'></i></a></td>";
                                 echo "</tr>";
+                                $title = "Thông báo !";
+                                $message = "Bạn có muốn xóa ".$proItem->getProname()." ra khỏi giỏ hàng không ?";
+                                //showDeleteMessage($title,$message,'#remove'.$proDetail->getProid(),$proItem->getProid());
                             } ?>
                                 <tr>
                                     <td colspan="3"><a class="continue-cart" href="index.php">Tiếp tục mua hàng</a></td>
-                                    <td>Tổng cộng:</td>
-                                    <td><span class='price'><?php echo number_format($_SESSION['total_price']); ?></span></td>
+                                    <td><span class='price'>Tổng tiền:</span></td> 
+                                    <td><b><?php echo number_format($_SESSION['total_price'],0,".","."); ?> đ </b></td>
                                 </tr>
                             </table>
+                            <input type='hidden' id='cartremoveid' value="" />
+                            <?php 
+                            foreach($_SESSION['cart'] as $k => $v) {  
+                                $proItem = $proList->findProductId($k);
+                                $title = "Thông báo !";
+                                $message = 'Bạn có muốn xóa '.$proItem->getProname().' giỏ hàng không ?';
+                                $remove = '#remove'.$proItem->getProid();
+                                $id = $proItem->getProid();
+                                showDeleteMessage($title,$message,$remove,$id);
+                            }?>
+                            <script type="text/javascript" src='assets/js/cart/removeCart.js'></script>
                         </div>
                         <div id='thanhtoan'>
                             <table>

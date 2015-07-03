@@ -1,0 +1,2 @@
+- Khi ở trang chi tiết 1 sản phẩm sửa thì khách hàng mới có thể thêm sữa vào giỏ hàng được. Và trong trang chi tiết sản phẩm thì khách hàng có thể chọn mua hàn là đưa vào giỏ hàng và thanh toán ngay.
+- Ở trang xem giỏ hàng thì khách hàng có thể xóa sữa trong giỏ hàng. Hoặc chỉnh sữa số lượng sữa. Sau đó khách hàng nhập thông tin của mình vào bên thanh toán. 
