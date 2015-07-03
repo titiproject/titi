@@ -32,7 +32,7 @@
                                 echo "<td><b>".number_format($proItem->getPrice(),0,".",".")." đ</b></td>";
                                 $tt = $v * $proItem->getPrice();
                                 echo "<td><b>".number_format($tt,0,".",".")." đ</b></td>";
-                                echo "<td><a href='javascript:void();' id='remove".$proItem->getProid()."'><i class='fa fa-trash fa-lg'></i></a></td>";
+                                echo "<td><a href='javascript:void(0);' id='remove".$proItem->getProid()."'><i class='fa fa-trash fa-lg'></i></a></td>";
                                 echo "</tr>";
                                 $title = "Thông báo !";
                                 $message = "Bạn có muốn xóa ".$proItem->getProname()." ra khỏi giỏ hàng không ?";

@@ -45,7 +45,7 @@
                                                 echo "<p>Hãng sản xuất :Netle </p>";
                                                 echo "<p>Giá: <span style='color:red'>".number_format($proDetail->getPrice())."&nbsp;VND</span></p>";                                             
                                                 echo "<p style='display:none;' id='proid'>".$proDetail->getProid()."</p>";
-                                                echo "<p><a href='javascript:void();' onclick='addCart(".$proDetail->getProid().")'>Them vao gio hang<i class='fa fa-cart-plus fa-lg'></i></a></p>";
+                                                echo "<p><a href='javascript:void(0);' onclick='addCart(".$proDetail->getProid().")'>Them vao gio hang<i class='fa fa-cart-plus fa-lg'></i></a></p>";
                                                 echo "<p><a href='".$urlShowCart."'>Mua hang<i class='fa fa-shopping-cart fa-lg'></i></a></p>";
                                                 echo "<p><a href='index.php'>Tiếp tục mua hàng</a></p>";
                                                 
