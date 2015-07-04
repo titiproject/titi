@@ -45,8 +45,8 @@
                                                 echo "<p>Hãng sản xuất :Netle </p>";
                                                 echo "<p>Giá: <span style='color:red'>".number_format($proDetail->getPrice())."&nbsp;VND</span></p>";                                             
                                                 echo "<p style='display:none;' id='proid'>".$proDetail->getProid()."</p>";
-                                                echo "<p><a href='javascript:void(0);' onclick='addCart(".$proDetail->getProid().")'>Them vao gio hang<i class='fa fa-cart-plus fa-lg'></i></a></p>";
-                                                echo "<p><a href='".$urlShowCart."'>Mua hang<i class='fa fa-shopping-cart fa-lg'></i></a></p>";
+                                                echo "<p><a id='btnAddCart' href='javascript:void(0);' onclick='addCart(".$proDetail->getProid().")'>Them vao gio hang<i class='fa fa-cart-plus fa-lg'></i></a></p>";
+                                                echo "<p><a href='javascript:void(0);' onclick='buyCart(".$proDetail->getProid().")'>Mua hang<i class='fa fa-shopping-cart fa-lg'></i></a></p>";
                                                 echo "<p><a href='index.php'>Tiếp tục mua hàng</a></p>";
                                                 
                                             ?>
@@ -62,12 +62,23 @@ function addCart(proid) {
         var message = $('.message');
         $('.messageTitle').text('Thông báo');
         $('.messageContent').html(data.message);
-        $('#cartError').bPopup({closeClass:'b-close', closeClass:'btn-success'});
+        var pb =$('#cartError').bPopup({closeClass:'b-close'});
         var width = message.width/2;
-        console.log(width);
-        $('.messageButton').html("<p class='btn-success' style='margin-left:35%;'>OK</p>");
+        $('.messageButton').html("<p class='btn-success'  style='margin-left:35%;'>OK</p>");
+        $('.btn-success').click(function() {pb.close();});
 
     });
+}
+
+function buyCart(proid) {
+    $.ajax({
+        method: 'POST',
+        url : 'index.php?controller=cart&action=add',
+        data: {proid: proid}
+    }).done(function(data) {
+        data = JSON.parse(data);        
+    });
+    window.location.href ="index.php?controller=cart&action=show";
 }
                                         </script>
                                     </div>

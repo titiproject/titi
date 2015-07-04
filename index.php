@@ -5,7 +5,7 @@ require_once('config.php');
 // load library
 require_once('library/error.php');
 require_once('library/function.php');
-require_once('./library/define.php');
+require_once('library/define.php');
 // load model
 titiimport('models/database/DB.php');
 require_once('models/class/category.php');
@@ -22,11 +22,11 @@ $proDB = new ProductDB();
 $catList = $catDB->getCategoies();
 $catListActive = $catList->getCategoriesActive()->getList();
 $proList = $proDB->getProducts();
-if (isset($_GET['catid'])) { 
+if (isset($_GET['catid'])) {
     $catid=$_GET['catid'];
     $proListActive = $proList->getProductsActive($catid);
     $catBreadcum = $catList->getCategory($catid);
-    
+
 } else {$proListActive = $proList->getProductsActiveDefault();
 }
 if ($catid == '0') {$proListActive = $proList->getProductsActiveDefault();}

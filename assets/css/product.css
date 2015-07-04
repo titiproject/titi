@@ -7,6 +7,7 @@ and open the template in the editor.
     Created on : Jul 2, 2015, 11:49:59 AM
     Author     : titi
 */
+html {font-family: arial,sans-serif; font-size: 10pt;}
 .prodetail { width: 100%; overflow: hidden;margin-bottom: 20px;}
 .prodetail>.proleft { float: left; width: 50%; margin-top: 5px;}
 .prodetail .proright {float: left; width: 45%;  margin-top: 10px; margin-left: 10px;}
@@ -32,8 +33,11 @@ and open the template in the editor.
 .carttitle {color:#ccc;overflow: hidden;}
 .carttitle li {padding: 10px; background: darkred;display: block;float: left;width: 40%; border:2px solid red;}
 .carttitle li:not(:first-child) {margin-left: -2px;}
-.cartlist th { color:#000;padding:2px;background: #ccc;padding:5px;font-weight:bold;}
+.cartlist th, .thanhtoan th { color:#000;padding:2px;background: #ccc;padding:5px;font-weight:bold;}
 .cartlist td {padding: 2px;text-align: center;vertical-align: middle;}
+
+/** XEM GIO HANG **/
+.cartlist {width: 50%;float: left;}
 b {font-weight:bolder;}
 
 @media screen and (min-width: 981px) {
